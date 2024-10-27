@@ -1,3 +1,6 @@
+// Programação de Software Básico: Trabalho 2
+// Integrantes: Maria Rita e Gabriel Kowaleski
+
 #include "mymemory.h"
 #include <stdio.h>
 
@@ -5,11 +8,11 @@ int main() {
   // Inicializa um pool de memória de 1MB
   mymemory_t *memory = mymemory_init(1024 * 1024);
   if (!memory) {
-    printf("Erro ao inicializar o gerenciador de memória\n");
+    printf("Erro ao inicializar o gerenciador de memória!!\n");
     return 1;
   }
 
-  printf("Teste do Gerenciador de Memória (Best Fit)\n");
+  printf("Testand o gerenciador de memória (Best Fit)\n");
   printf("------------------------------------------\n");
 
   // Teste 1: Alocações básicas
@@ -51,7 +54,7 @@ int main() {
 
   // Limpeza final
   mymemory_cleanup(memory);
-  printf("\nTestes concluídos.\n");
+  printf("\nParabéns!! Nossos testes foram concluídos.\n");
 
   return 0;
 }

@@ -23,17 +23,16 @@ mymemory_t* mymemory_init(size_t size) {
 }
 
 void* mymemory_alloc(mymemory_t *memory, size_t size) {
-    if (!memory || !size) {
+    if (!memory || !size)
         return NULL;
-    }
-
+    
     allocation_t *curr = memory->head;
     allocation_t *prev = NULL;
     void *start = memory->pool;
 
     // Variáveis para rastrear o melhor ajuste
     void *best_fit_start = NULL;
-    size_t best_fit_size = memory->total_size + 1; // Inicializa com um valor maior que possível
+    size_t best_fit_size = memory->total_size + 1; // Inicializa com valor maior que possível
     allocation_t *best_fit_prev = NULL;
 
     // Procura o melhor ajuste entre todas as lacunas
